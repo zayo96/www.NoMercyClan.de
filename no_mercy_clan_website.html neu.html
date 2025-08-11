@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>NoMercyClan — Offizielle Seite</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    :root{
+      --accent: #00f5a0;
+      --accent-2: #ff3b3b;
+      --bg: #050608;
+      --card: #0f1216;
+    }
+    body{
+      background: radial-gradient(circle at top, #0a0f14 0%, var(--bg) 100%), url('assets/bg-pattern.png');
+      background-size: cover;
+      color:#e6eef3;
+      overflow-x:hidden;
+    }
+    .glow{text-shadow:0 0 10px rgba(0,245,160,.4),0 0 20px rgba(255,59,59,.2)}
+    .accent{color:var(--accent)}
+    .accent-2{color:var(--accent-2)}
+    .btn-accent{
+      background:linear-gradient(90deg,var(--accent-2),var(--accent));
+      box-shadow:0 0 10px var(--accent),0 0 20px var(--accent-2);
+      transition:transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .btn-accent:hover{
+      transform:scale(1.05);
+      box-shadow:0 0 20px var(--accent),0 0 40px var(--accent-2);
+    }
+    .btn-ghost{border:1px solid rgba(255,255,255,.06);transition:background 0.2s ease;}
+    .btn-ghost:hover{background:rgba(255,255,255,0.05);}
+    .hover-card:hover{transform:scale(1.02);box-shadow:0 0 20px rgba(0,245,160,0.3);}
+  </style>
+</head>
+<body class="antialiased font-sans">
+  <!-- HEADER -->
+  <header class="p-4 md:p-6 flex items-center justify-between border-b border-gray-800 bg-[rgba(0,0,0,0.6)] backdrop-blur-md sticky top-0 z-50">
+    <div class="flex items-center gap-3">
+      <div class="w-20 h-20 rounded-full bg-black flex items-center justify-center border-2 border-accent-2 overflow-hidden shadow-lg shadow-[var(--accent-2)] animate-pulse">
+        <img src="assets/logo.png" alt="NoMercyClan Logo" class="w-full h-full object-cover" />
+      </div>
+      <div>
+        <h1 class="text-2xl font-extrabold glow tracking-wider">NoMercyClan</h1>
+        <span class="text-sm text-gray-400 block">Competitive • COD • Ninja</span>
+      </div>
+    </div>
+    <nav class="hidden md:flex gap-4 items-center">
+      <a href="#members" class="text-sm hover:text-[var(--accent)] transition">Mitglieder</a>
+      <a href="#matches" class="text-sm hover:text-[var(--accent)] transition">Liga-Spiele</a>
+      <a href="#streams" class="text-sm hover:text-[var(--accent)] transition">Livestreams</a>
+      <a href="#events" class="text-sm hover:text-[var(--accent)] transition">Events</a>
+      <a href="#apply" class="text-sm btn-ghost rounded px-3 py-2">Clan bewerben</a>
+    </nav>
+    <div class="md:hidden">
+      <button aria-label="Menü" class="p-2 btn-ghost rounded">☰</button>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="relative h-[80vh] flex items-center justify-center text-center bg-black overflow-hidden">
+    <video autoplay muted loop class="absolute w-full h-full object-cover opacity-40">
+      <source src="assets/cod-action.mp4" type="video/mp4">
+    </video>
+    <div class="relative z-10">
+      <h2 class="text-5xl md:text-6xl font-extrabold glow">Join the Battle</h2>
+      <p class="mt-4 text-lg text-gray-300">Verfolge unsere Matches, werde Teil des Clans und erlebe den Adrenalinkick.</p>
+      <div class="mt-6 flex flex-wrap justify-center gap-4">
+        <a href="#apply" class="px-6 py-3 rounded-lg text-black font-semibold btn-accent">Jetzt bewerben</a>
+        <a href="#streams" class="px-6 py-3 rounded-lg border border-gray-700 hover:bg-[rgba(255,255,255,0.05)]">Livestreams</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- INTERACTIVE CARDS -->
+  <section id="highlights" class="max-w-7xl mx-auto px-4 py-16 grid md:grid-cols-3 gap-6">
+    <div class="bg-card p-6 rounded-lg border border-gray-800 hover-card transition-transform">
+      <h3 class="text-xl font-bold mb-2">Top Spieler</h3>
+      <p class="text-gray-400">Lerne unsere besten Shooter kennen und studiere ihre Strategien.</p>
+    </div>
+    <div class="bg-card p-6 rounded-lg border border-gray-800 hover-card transition-transform">
+      <h3 class="text-xl font-bold mb-2">Live Matches</h3>
+      <p class="text-gray-400">Sieh dir aktuelle Matches live an und unterstütze unser Team.</p>
+    </div>
+    <div class="bg-card p-6 rounded-lg border border-gray-800 hover-card transition-transform">
+      <h3 class="text-xl font-bold mb-2">Clan Events</h3>
+      <p class="text-gray-400">Nimm an unseren Community-Events teil und gewinne exklusive Preise.</p>
+    </div>
+  </section>
+</body>
+</html>
